@@ -70,7 +70,7 @@ class Importer {
 	 * @return [type] [description]
 	 */
 	public function clearDatabase() {
-		$tables = ['donors', 'donor_vaccines', 'donor_visits', 'experimental_data'];
+		$tables = ['donors', 'donor_visits', 'experimental_data'];
 		foreach ($tables as $table) {
 			try {
 				$truncate_tables = $this->_pdo->prepare("TRUNCATE TABLE " . $table . ";");
