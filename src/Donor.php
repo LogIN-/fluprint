@@ -314,6 +314,9 @@ class Donor {
 			if (isset($dataItem["ethnicity"])) {
 				if (!isset($data["race"]) && trim($dataItem["ethnicity"]) !== "") {
 					$data["race"] = PHPFunc::sanitizeRace($dataItem["ethnicity"]);
+					if ($data["race"] === "Unknown") {
+						unset($data["race"]);
+					}
 				}
 			}
 
