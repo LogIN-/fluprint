@@ -50,7 +50,6 @@ class Donor {
 
 		'donors' => array(
 			'main_data' => array(),
-			'donor_vaccines' => array(),
 		),
 		'donor_visits' => array(),
 		'experimental_data' => array(),
@@ -88,13 +87,6 @@ class Donor {
 		if (count($this->database["donors"]["main_data"]) > 0) {
 			$this->insertedDataTracker["donors.main_data"] = true;
 			$this->insertData('donors.main_data');
-		}
-
-		Logger::write()->addInfo("Processing: DB => donor_vaccines");
-		$this->setDonorVaccinesDatabaseTables();
-		if (count($this->database["donors"]["donor_vaccines"]) > 0) {
-			$this->insertedDataTracker["donors.donor_vaccines"] = true;
-			$this->insertData('donors.donor_vaccines');
 		}
 
 		// 2. Generate Visits and Experimental data
@@ -174,10 +166,6 @@ class Donor {
 		} else if ($type === 'donor_visits') {
 			foreach ($this->database["donor_visits"] as $visitKey => $visitValue) {
 				$this->database["donor_visits"][$visitKey]["donor_visits_id"] = $this->insert('donor_visits', $visitValue, true);
-			}
-		} else if ($type === 'donors.donor_vaccines') {
-			foreach ($this->database["donors"]["donor_vaccines"] as $vaccineKey => $vaccineValue) {
-				$this->insert('donor_vaccines', $vaccineValue);
 			}
 		} else if ($type === 'experimental_data') {
 			foreach ($this->database["experimental_data"] as $experimental_key => $experimental_value) {
@@ -351,45 +339,7 @@ class Donor {
 		}
 		$this->database["donors"]["main_data"] = $data;
 	}
-	/**
-	 * [setDonorVaccinesDatabaseTables description]
-	 */
-	private function setDonorVaccinesDatabaseTables() {
-		$donor_vaccines = array();
 
-		foreach ($this->data as $dataItem) {
-			$vaccineData = array();
-
-			if (isset($dataItem["_17__date_of_immunization"])
-				&& trim($dataItem["_17__date_of_immunization"]) !== "") {
-
-				$vaccineData["name"] = $dataItem["_17__date_of_immunization"];
-				$vaccineData["donor_id"] = $this->database["donors"]["main_data"]["donor_id"];
-
-				$date_fields = array(1, 6, 7, 8, 9);
-				foreach ($date_fields as $date_id) {
-					$date_label = "date_of_immunization_" . $date_id;
-
-					if (isset($dataItem[$date_label]) &&
-						trim($dataItem[$date_label]) !== "") {
-
-						$vaccineData["date"] = $dataItem[$date_label];
-
-						$date = strtotime($dataItem[$date_label]);
-						$vaccineData["date"] = date('Y-m-d H:i:s', $date);
-
-						$idx = md5(json_encode($vaccineData));
-
-						if (!isset($donor_vaccines[$idx])) {
-							$donor_vaccines[$idx] = $vaccineData;
-						}
-					}
-				}
-			}
-		}
-
-		$this->database["donors"]["donor_vaccines"] = $donor_vaccines;
-	}
 	/**
 	 * [setDonorVisitsDatabaseTables description]
 	 */
