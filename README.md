@@ -30,6 +30,11 @@ Install the dependencies and start the mysql server.
 	## ./config/configuration.json
 ```
 
+* Download project data from the link provided and place it into
+```sh
+	./data/upload
+```
+
 * Import all database data
 ```sh
 	php bin/import.php -t import
