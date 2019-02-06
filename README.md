@@ -1,4 +1,6 @@
 # FluPRINT
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FLogIN-%2Ffluprint.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FLogIN-%2Ffluprint?ref=badge_shield)
+
 
 ### Tech
 `FluPRINT` uses a number of open source projects to work properly ¯\_(ツ)_/¯
@@ -43,3 +45,5 @@ Install the dependencies and start the mysql server.
 ## License
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FLogIN-%2Ffluprint.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FLogIN-%2Ffluprint?ref=badge_large)
