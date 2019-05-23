@@ -16,7 +16,7 @@
 
 ### Technology
 `FluPRINT` uses a number of open source projects to work properly ¯\_(ツ)_/¯
-You can find more info on [fluprint.com](fluprint.com) website that is also avaliable as open-source project [here](https://github.com/LogIN-/fluprint.com)
+You can find more info on [fluprint.com](https://fluprint.com) website that is also avaliable as open-source project [here](https://github.com/LogIN-/fluprint.com)
 
 ### Installation process
 To install and configure `FluPRINT` first you need to satisfy following requirements: `PHP > 7`, `MySQL`, `Linux` or `Mac OS`.
@@ -77,7 +77,7 @@ You may also find helpful our other open source projects
 * [simon](https://github.com/genular/simon-frontend) - Automated knowledge discovery platform
 
 ## Reaching Out
-If you'd like to start a conversation feel free to e-mail me at [atomic@stanford.edu](mailto:atomic@stanford.edu)
+If you'd like to start a conversation feel free to e-mail me at [info@adrianatomic.com](mailto:info@adrianatomic.com)
 We would also gladly like to hear from you if you find this project useful and helpful.
 
 ## License
@@ -93,7 +93,7 @@ Adriana Tomic, Ivan Tomic, Cornelia L Dekker, Holden T Maecker, Mark M Davis
 bioRxiv 564062; doi: https://doi.org/10.1101/564062
 ```
 ```sh
-Adriana Tomic, & Ivan Tomic. (2019). Raw data for the generation of the FluPRINT dataset [Data set]. Zenodo. https://doi.org/10.5281/zenodo.3213899
+Tomic, Adriana, & Tomic, Ivan. (2019). The FluPRINT database [Data set]. Zenodo. http://doi.org/10.5281/zenodo.3222451
 ```
 
-Any questions? Please contact us at [atomic@stanford.edu](mailto:atomic@stanford.edu)
+Any questions? Please contact us at [info@adrianatomic.com](mailto:info@adrianatomic.com)
