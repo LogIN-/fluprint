@@ -1,0 +1,14 @@
+/data/upload/*
+/log/*
+/vendor/
+
+composer.lock
+composer.phar
+
+fluprint.sublime-workspace
+
+database.mwb.bak
+~
+
+
+original.tar.gz

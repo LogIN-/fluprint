@@ -1,0 +1,28 @@
+{
+    "name": "atomic/fluprint",
+    "description": "FluPRINT database repository.",
+    "type": "project",
+    "require": {
+
+        "caseyamcl/configula": "^2.4",
+        "monolog/monolog": "^1.22",
+        "bramus/monolog-colored-line-formatter": "^2.0",
+        "nategood/commando": "^0.2.9"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "LogIN",
+            "email": "info@ivantomic.com"
+        },
+        {
+            "name": "Atomic",
+            "email": "tomic.adriana@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SysLog\\": ["src/"]
+        }
+    }
+}

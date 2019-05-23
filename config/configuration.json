@@ -1,0 +1,106 @@
+{
+    "import": {
+        "database": {
+            "hostname": "localhost",
+            "port": "3306",
+            "name": "fluprint",
+            "username": "fluprint",
+            "password": "6WoM3DxrcMlavXGs5fNU"
+        },
+        "mapping": {
+            "30": {
+                "donor_id": {
+                    "field_name": "person"
+                },
+                "visit_id": {
+                    "field_name": "sample",
+                    "regex": "\/-(\\d+)?\\s?[V](\\d+)\/",
+                    "group": "2"
+                }
+            },
+            "29": {
+                "donor_id": {
+                    "field_name": "person"
+                },
+                "visit_id": {
+                    "field_name": "sample",
+                    "regex": "\/-(\\d+)?\\s?[V](\\d+)$\/",
+                    "group": "2"
+                }
+            },
+            "28": {
+                "donor_id": {
+                    "field_name": "person"
+                },
+                "visit_id": {
+                    "field_name": "sample",
+                    "regex": "\/-(\\d+)?[V](\\d+)$\/",
+                    "group": "2"
+                }
+            },
+            "24": {
+                "donor_id": {
+                    "field_name": "person" 
+                },
+                "visit_id": {
+                    "field_name": "sample",
+                    "regex": "\/-[V](\\d+)-\/",
+                    "group": "1"
+                }
+            },
+
+            "21": {
+                "donor_id": {
+                    "field_name": "person"
+                },
+                "visit_id": {
+                    "field_name": "sample",
+                    "regex": "\/-(\\d+)?[V]?(\\d+)$\/",
+                    "group": "2"
+                }
+            },
+
+            "22": {
+                "donor_id": {
+                    "field_name": "person"
+                },
+                "visit_id": {
+                    "field_name": "sample",
+                    "regex": "",
+                    "group": "1"
+                }
+            },
+            "18": {
+                "donor_id": {
+                    "field_name": "person"
+                },
+                "visit_id": {
+                    "field_name": "day",
+                    "regex": "\/(\\d+)\/",
+                    "group": "1"
+                }
+            },
+            "17": {
+                "donor_id": {
+                    "field_name": "person"
+                },
+                "visit_id": {
+                    "field_name": "sample",
+                    "regex": "\/-(\\d+)?[V](\\d+)$\/",
+                    "group": "2"
+                }
+            },
+            "15": {
+                "donor_id": {
+                    "field_name": "person"
+                },
+                "visit_id": {
+                    "field_name": "sample",
+                    "regex": "\/-(\\d+)?[V](\\d+)$\/",
+                    "group": "2"
+                }
+            }
+        }
+    },
+    "required_fields": ["Person"]
+}
